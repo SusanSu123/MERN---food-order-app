@@ -22,6 +22,7 @@
   "homepage": "https://github.com/SusanSu123/MERN---food-order-app#readme",
   "description": "",
   "dependencies": {
+    "@apollo/client": "^3.4.5",
     "@fortawesome/fontawesome-svg-core": "^1.2.35",
     "@fortawesome/free-solid-svg-icons": "^5.15.3",
     "@fortawesome/react-fontawesome": "^0.1.14",
