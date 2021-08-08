@@ -56,21 +56,24 @@ const resolvers = {
         },
 
         checkout: async (parent, args, context) => {
+            console.log('i am calling')
             const url = new URL(context.headers.referer).origin;
             const order = new Order({ foods: args.foods });
             const line_items = [];
 
             const { foods } = await order.populate('foods').execPopulate();
 
+            console.log('stripe', stripe.products);
+
             for (let i = 0; i < foods.length; i++) {
-                const food = await stripe.foods.create({
+                const food = await stripe.products.create({
                     name: foods[i].name,
                     description: foods[i].description,
                     images: [`${url}/images/${foods[i].image}`]
                 });
 
                 const price = await stripe.prices.create({
-                    food: food.id,
+                    product: food.id,
                     unit_amount: foods[i].price * 100,
                     currency: 'aud',
                 });
@@ -84,7 +87,7 @@ const resolvers = {
             const session = await stripe.checkout.sessions.create({
                 payment_method_types: ['card'],
                 line_items,
-                mode: 'paymnet',
+                mode: 'payment',
                 success_url: `${url}/success?session_id={CHECKOUT_SESSION_ID}`,
                 cancel_url: `${url}/`
             });
@@ -135,7 +138,7 @@ const resolvers = {
                 throw new AuthenticationError('Incorrect credentials');
             }
 
-            const correctPw = await user.isCorrectpassword(password);
+            const correctPw = await user.isCorrectPassword(password);
 
             if (!correctPw) {
                 throw new AuthenticationError('Incorrect credentials');

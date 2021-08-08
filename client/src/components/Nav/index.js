@@ -40,13 +40,20 @@ function Nav() {
     }
 
     return (
-        <header className="flex-row px-1">
-            <h1>
-                <Link to="/">
-                    Order Now
-                </Link>
-            </h1>
+        <header>
+            <ul className="flex-row">
+                <li className="mx-1">
+                    <Link to="/">
+                        HOME
+                    </Link>
+                </li>
 
+                <li className="mx-1">
+                    <Link to="/menu">
+                        MENU
+                    </Link>
+                </li>
+            </ul>
             <nav>
                 {showNavigation()}
             </nav>

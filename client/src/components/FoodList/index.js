@@ -46,7 +46,7 @@ function FoodList() {
     return (
         <div className="my-2">
             {state.foods.length ? (
-                <div className="flex-row space-between">
+                <div className="flex-row space-start">
                     {filterFoods().map((food) => (
                         <FoodItem
                             key={food._id}
@@ -54,7 +54,6 @@ function FoodList() {
                             image={food.image}
                             name={food.name}
                             price={food.price}
-                            quantity={food.quantity}
                         />
                     ))}
                 </div>

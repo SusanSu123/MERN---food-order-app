@@ -1,13 +1,11 @@
 import React from "react";
-import FoodList from "../components/FoodList";
-import CategoryMenu from "../components/CategoryMenu";
 import Cart from "../components/Cart";
+import Homepage from "../components/Homepage"
 
 const Home = () => {
   return (
-    <div className="container">
-      <CategoryMenu />
-      <FoodList />
+    <div className="container-1">
+      <Homepage />
       <Cart />
     </div>
   );

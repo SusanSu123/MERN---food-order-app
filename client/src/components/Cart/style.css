@@ -28,7 +28,7 @@
 }
 
 .cart .close:hover {
-  /* text-decoration: underline; */
+  text-decoration: underline;
 }
 
 .cart-closed {
@@ -49,7 +49,6 @@
 }
 
 .cart img {
-  width: 70px;
   margin-right: 1rem;
 }
 
@@ -68,8 +67,8 @@
     background-color: inherit;
   }
 
-  .cart-closed {
+  /* .cart-closed {
     position: relative;
     margin: 0 auto;
-  }
+  } */
 }
