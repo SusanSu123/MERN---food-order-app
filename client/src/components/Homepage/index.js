@@ -44,7 +44,9 @@ function Homepage() {
 
                         Phone: 03 9000 8888<br />
                         Email: sukitchen@gmail.com<br />
-                        Address: 111 Bourke Street, VIC 3000
+                        Address: 111 Bourke Street, VIC 3000<br />
+                        Website: https://food-online-order.herokuapp.com/
+
 
 
                     </p>
