@@ -2,7 +2,7 @@
 
 ## Overview
 
- The app was built using the MERN stack with a React front end, MongoDB database, and Node.js/Express.js server and API. Also has Stripe payment integrated allowing fully functional test payments.
+ The app was built with MERN stack, a React front end, MongoDB database, and Node.js/Express.js server and API. Also has Stripe payment integrated allowing fully functional test payments.
 
 ## Technologies used
 * React
